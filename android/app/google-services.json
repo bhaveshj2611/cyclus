@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "724484146778",
+    "project_id": "female-health-e1d27",
+    "storage_bucket": "female-health-e1d27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724484146778:android:ad50f0257498a5239efa63",
+        "android_client_info": {
+          "package_name": "com.example.female_health"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "724484146778-qq7i2q597nlkr8j7na8rac79gab03qkn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.female_health",
+            "certificate_hash": "ef50aa823edcd227c365ecc678088e5b3db300a1"
+          }
+        },
+        {
+          "client_id": "724484146778-efenh0vfc4b961r3l0d81udulf1b4o3o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSNbK13icENihdhk8XrfDKHUYsw8e18C0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "724484146778-efenh0vfc4b961r3l0d81udulf1b4o3o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "724484146778-965mm17s521f9funlbo8upvvihibgddb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.femaleHealth"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
