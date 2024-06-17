@@ -68,10 +68,3 @@ backend and Flutter and Dart for the frontend.
 </table>
 
 
-* A brain to modify it
- 
-
-
-## App Flutter backend 
-
-- https://github.com/nibinpsreenivas/Hellogram-node-js-backend/
