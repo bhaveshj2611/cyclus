@@ -5,7 +5,7 @@ and general health easier by utilizing machine learning techniques with Flask,Py
 backend and Flutter and Dart for the frontend.
 
 
-<img src="./pages/HomeScreen.jpg" alt="" width="220">
+<img src="./appmodelshots/cyclus-readme.png" alt="" width="420">
 ## Screenshots
  
 <table border>
