@@ -6,14 +6,11 @@ import 'package:female_health/widgets/appBar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-// import '../routes/route_name.dart';
-
 class Exercise {
   final String name;
   final String imageUrl;
   final String description;
   final void Function(BuildContext) onTap;
-  // final String completed;
 
   Exercise(this.name, this.imageUrl, this.description, this.onTap);
 }
@@ -30,8 +27,6 @@ class ExerciseScreen extends StatelessWidget {
         },
       ));
     }),
-    // Exercise('Pilates', "20"),
-    // Exercise('Full body', "14"),
     Exercise('Yoga with Levels', 'assets/images/stretching.png',
         'Go with Beginner, Intermediate and Advanced Yoga Poses', (context) {
       Navigator.of(context).push(MaterialPageRoute(
@@ -48,16 +43,6 @@ class ExerciseScreen extends StatelessWidget {
         },
       ));
     }),
-    // Exercise('Pilates', "20"),
-    // Exercise('Full body', "14"),
-    // Exercise('Yoga with Levels', 'assets/images/stretching.png',
-    //     'Go with Beginner, Intermediate and Advanced Yoga Poses', (context) {
-    //   Navigator.of(context).push(MaterialPageRoute(
-    //     builder: (context) {
-    //       return const YogaLevelsScreen();
-    //     },
-    //   ));
-    // }),
   ];
 
   @override
@@ -80,18 +65,15 @@ class ExerciseScreen extends StatelessWidget {
                       boxShadow: [
                         BoxShadow(
                             color: AppColor.offblack.withOpacity(0.2),
-                            blurRadius: 10, // Adjust the blur radius as needed
-                            spreadRadius:
-                                1, // Adjust the spread radius as needed
+                            blurRadius: 10,
+                            spreadRadius: 1,
                             offset: const Offset(0, 4))
                       ],
                       borderRadius:
                           const BorderRadius.all(Radius.circular(20))),
                   child: Row(
-                    // crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      // const SizedBox(height: 8),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -123,7 +105,6 @@ class ExerciseScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-
                       ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.asset(
@@ -134,8 +115,6 @@ class ExerciseScreen extends StatelessWidget {
                           // width: double.maxFinite,
                         ),
                       ),
-
-                      // const SizedBox(height: 8),
                     ],
                   ),
                 ),

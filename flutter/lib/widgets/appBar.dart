@@ -1,6 +1,3 @@
-// import 'package:antarmitra/controller/usercontroller.dart';
-// import 'package:antarmitra/utils/app_color.dart';
-// import 'package:antarmitra/utils/app_constants.dart';
 import 'package:female_health/utils/app_color.dart';
 import 'package:female_health/utils/app_constants.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +20,6 @@ buildAppBar({
             onTap: () {},
             child: Image.asset(
               'assets/logo/notification.png',
-              // width: 80,
               color: AppColor.offwhite,
             )),
       ),

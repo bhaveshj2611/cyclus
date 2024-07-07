@@ -86,7 +86,6 @@ class _YogaLevelsScreenState extends State<YogaLevelsScreen> {
                               height: 140,
                               width: 162.72,
                               errorBuilder: (context, error, stackTrace) {
-                                // Display placeholder image if there is an error loading the image
                                 return Image.asset(
                                   placeholderImage,
                                   fit: BoxFit.fill,
@@ -104,7 +103,7 @@ class _YogaLevelsScreenState extends State<YogaLevelsScreen> {
               },
             );
           } else {
-            return const SizedBox(); // Placeholder
+            return const SizedBox();
           }
         },
       ),
@@ -113,12 +112,6 @@ class _YogaLevelsScreenState extends State<YogaLevelsScreen> {
 }
 
 Future<List<YogaCourse>> fetchData(BuildContext context) async {
-  // LoadingProvider loadingProvider =
-  // Provider.of<LoadingProvider>(context, listen: false);
-  // loadingProvider.setLoading(true);
-  // setState(() {
-  //   isLoading = true;
-  // });
   const url = 'https://priyangsubanerjee.github.io/yogism/yogism-api.json';
 
   try {
@@ -128,35 +121,23 @@ Future<List<YogaCourse>> fetchData(BuildContext context) async {
       final courses = jsonData
           .map((courseJson) => YogaCourse.fromJson(courseJson))
           .toList();
-      // Set loading to false after data is fetched
-      // setState(() {
-      //   isLoading = false;
-      // });
+
       return courses;
     } else {
-      // Set loading to false on error
-      // setState(() {
-      //   isLoading = false;
-      // });
       throw Exception('Failed to load data');
     }
   } catch (e) {
     print('Error fetching data: $e');
-    // setState(() {
-    //   isLoading = false;
-    // });
+
     throw Exception('Error fetching data');
   }
-  // setState(() {
-  //   isLoading = false;
-  // });
 }
 
 String capFirst(String input) {
   List<String> words = input.split(' ');
   List<String> capitalizedWords = words.map((word) {
     if (word.isEmpty) {
-      return word; // Handle empty strings if needed
+      return word;
     }
     return word[0].toUpperCase() + word.substring(1);
   }).toList();

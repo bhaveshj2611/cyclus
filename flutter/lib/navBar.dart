@@ -2,7 +2,7 @@ import 'package:female_health/screens/chat.dart';
 import 'package:female_health/screens/exercise.dart';
 import 'package:female_health/screens/home_screen.dart';
 import 'package:female_health/screens/profile.dart';
-// import 'package:female_health/screens/tracker.dart';
+
 import 'package:female_health/utils/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
@@ -20,9 +20,6 @@ class NavBar extends StatelessWidget {
       return [
         const Home(),
         ExerciseScreen(),
-
-        // const Tracker(),
-
         const Profile(),
         const ChatScreen(),
       ];
@@ -44,14 +41,6 @@ class NavBar extends StatelessWidget {
           inactiveColorPrimary: AppColor.offwhite,
           activeColorPrimary: AppColor.yellow,
         ),
-        // PersistentBottomNavBarItem(
-        //   icon: const Icon(Icons.add),
-        //   iconSize: 35,
-        //   title: ("Tracker"),
-        //   inactiveColorPrimary: AppColor.offwhite,
-        //   activeColorPrimary: AppColor.yellow,
-        // ),
-
         PersistentBottomNavBarItem(
           icon: const Icon(Icons.person),
           title: ("Profile"),

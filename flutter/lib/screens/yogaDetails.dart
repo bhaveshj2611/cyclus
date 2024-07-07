@@ -60,8 +60,6 @@ class YogaDetailsScreen extends StatelessWidget {
 
                         return GestureDetector(
                           onTap: () {
-                            // Navigate to the details screen for this pose
-                            // You can pass the pose object to the details screen
                             Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -155,7 +153,6 @@ class YogaDetailsScreen extends StatelessWidget {
                                           fit: BoxFit.cover,
                                           errorBuilder:
                                               (context, error, stackTrace) {
-                                            // Display placeholder image if there is an error loading the image
                                             return Image.asset(
                                               placeholderImage,
                                               fit: BoxFit.cover,
@@ -166,14 +163,6 @@ class YogaDetailsScreen extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                // const SizedBox(height: 6),
-
-                                // const SizedBox(height: 4),
-                                // const Row(
-                                //   children: [],
-                                // ),
-                                // const SizedBox(height: 8),
-                                // const Divider(),
                               ],
                             ),
                           ),

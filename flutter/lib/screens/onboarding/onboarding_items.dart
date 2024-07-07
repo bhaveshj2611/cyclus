@@ -1,5 +1,3 @@
-import 'package:female_health/utils/app_constants.dart';
-
 import 'onboarding_info.dart';
 
 class OnboardingItems {

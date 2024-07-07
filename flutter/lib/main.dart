@@ -1,6 +1,5 @@
 import 'package:female_health/controller/loading_provider.dart';
 import 'package:female_health/controller/user_provider.dart';
-
 import 'package:female_health/firebase_options.dart';
 import 'package:female_health/routes/custom_route.dart';
 import 'package:female_health/routes/route_name.dart';
@@ -33,7 +32,6 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

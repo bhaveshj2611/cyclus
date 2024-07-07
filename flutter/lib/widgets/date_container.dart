@@ -4,12 +4,12 @@ class DateContainer extends StatefulWidget {
   final TextInputType? keyboardType;
   final String hitText;
   final String icon;
-  Color color;
+  final Color color;
   final Widget? rigtIcon;
   final bool obscureText;
   final EdgeInsets? margin;
   final Function(String) onDateSelected;
-  DateContainer({
+  const DateContainer({
     Key? key,
     required this.hitText,
     required this.icon,

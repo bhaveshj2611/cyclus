@@ -1,5 +1,5 @@
 import 'package:female_health/controller/user_provider.dart';
-import 'package:female_health/firebase_const.dart';
+
 import 'package:female_health/model/user.dart';
 import 'package:female_health/routes/route_name.dart';
 import 'package:female_health/utils/app_color.dart';
@@ -7,14 +7,10 @@ import 'package:female_health/utils/app_gradient.dart';
 import 'package:female_health/widgets/date_container.dart';
 import 'package:female_health/widgets/round_button.dart';
 import 'package:female_health/widgets/round_textfield.dart';
-// import 'package:fitness/common/colo_extension.dart';
-// import 'package:fitness/view/login/what_your_goal_view.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
-
-// import '../../common_widget/round_button.dart';
-// import '../../common_widget/round_textfield.dart';
 
 class CompleteProfileView extends StatefulWidget {
   const CompleteProfileView({super.key});
@@ -24,14 +20,9 @@ class CompleteProfileView extends StatefulWidget {
 }
 
 class _CompleteProfileViewState extends State<CompleteProfileView> {
-  // TextEditingController txtDate = TextEditingController();
   TextEditingController heightController = TextEditingController();
   TextEditingController weightController = TextEditingController();
   var dob = '';
-
-  // final userProvider = Provider.of<UserProvider>(context, listen: false);
-
-// Define a variable to store the selected value
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +39,7 @@ class _CompleteProfileViewState extends State<CompleteProfileView> {
               children: [
                 Image.asset(
                   "assets/images/compProf.png",
-                  // width: media.width,
                   width: 250,
-                  // fit: BoxFit.fitWidth,
                 ),
                 SizedBox(
                   height: media.width * 0.05,
@@ -82,7 +71,7 @@ class _CompleteProfileViewState extends State<CompleteProfileView> {
                         color: AppColor.darkBlue,
                         onDateSelected: (date) {
                           setState(() {
-                            dob = date; // Update the selected date
+                            dob = date;
                           });
                         },
                       ),
@@ -164,10 +153,6 @@ class _CompleteProfileViewState extends State<CompleteProfileView> {
                       RoundButton(
                           title: "Next",
                           onPressed: () {
-                            //                         String dateOfBirth = txtDate.text;
-                            // String weight = weightController.text;
-                            // String height = heightController.text;
-
                             final updatedUser = UserModel(
                               uid: userProvider.user!.uid,
                               firstName: userProvider.user!.firstName,
@@ -180,8 +165,6 @@ class _CompleteProfileViewState extends State<CompleteProfileView> {
                             );
                             userProvider.setUser(updatedUser);
 
-                            // Store updated user data in Firestore
-                            // storeUserData(updatedUser);
                             Navigator.of(context).pushNamed(RouteName.avgcycle);
                           }),
                     ],
@@ -194,15 +177,4 @@ class _CompleteProfileViewState extends State<CompleteProfileView> {
       ),
     );
   }
-
-  // void storeUserData(UserModel userModel) {
-  //   // Store the updated user data in Firestore
-  //   // You can use userModel to access the updated user data
-  //   // Example:
-  //   firestore.collection('Users').doc(userModel.uid).set({
-  //     'date_of_birth': userModel.dateOfBirth,
-  //     'weight': userModel.weight,
-  //     'height': userModel.height,
-  //   });
-  // }
 }

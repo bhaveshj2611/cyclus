@@ -2,9 +2,6 @@ import 'package:female_health/routes/route_name.dart';
 import 'package:female_health/screens/onboarding/onboarding_items.dart';
 import 'package:female_health/utils/app_color.dart';
 import 'package:flutter/material.dart';
-// import 'package:flutter_onetime_onboarding_page/Components/color.dart';
-// // import 'package:flutter_onetime_onboarding_page/Onboboarding/onboarding_items.dart';
-// import 'package:flutter_onetime_onboarding_page/home.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -32,13 +29,10 @@ class _OnboardingViewState extends State<OnboardingView> {
             : Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  //Skip Button
                   TextButton(
                       onPressed: () => pageController
                           .jumpToPage(controller.items.length - 1),
                       child: const Text("Skip")),
-
-                  //Indicator
                   SmoothPageIndicator(
                     controller: pageController,
                     count: controller.items.length,
@@ -51,8 +45,6 @@ class _OnboardingViewState extends State<OnboardingView> {
                       activeDotColor: AppColor.orange,
                     ),
                   ),
-
-                  //Next Button
                   TextButton(
                       onPressed: () => pageController.nextPage(
                           duration: const Duration(milliseconds: 600),
@@ -90,12 +82,6 @@ class _OnboardingViewState extends State<OnboardingView> {
     );
   }
 
-  //Now the problem is when press get started button
-  // after re run the app we see again the onboarding screen
-  // so lets do one time onboarding
-
-  //Get started button
-
   Widget getStarted() {
     return Container(
       decoration: BoxDecoration(
@@ -109,8 +95,6 @@ class _OnboardingViewState extends State<OnboardingView> {
             final pres = await SharedPreferences.getInstance();
             pres.setBool("onboarding", true);
 
-            //After we press get started button this onboarding value become true
-            // same key
             if (!mounted) return;
             Navigator.of(context).pushReplacementNamed(RouteName.signUp);
           },

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-// import '../common/colo_extension.dart';
-
 class SettingRow extends StatelessWidget {
   final String icon;
   final String title;

@@ -3,7 +3,7 @@ import 'package:female_health/model/user.dart';
 import 'package:female_health/routes/route_name.dart';
 import 'package:female_health/utils/app_color.dart';
 import 'package:female_health/utils/app_gradient.dart';
-import 'package:female_health/widgets/round_button.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:numberpicker/numberpicker.dart';
@@ -33,9 +33,7 @@ class _AvgCycleState extends State<AvgCycle> {
           children: <Widget>[
             Image.asset(
               "assets/images/track.png",
-              // width: media.width,
               width: 250,
-              // fit: BoxFit.fitWidth,
             ),
             SizedBox(
               height: media.width * 0.15,
@@ -100,8 +98,6 @@ class _AvgCycleState extends State<AvgCycle> {
                       Navigator.of(context).pushNamed(RouteName.periodDates);
                     },
                     style: OutlinedButton.styleFrom(
-                      // backgroundColor: AppColor.orange,
-
                       foregroundColor: AppColor.orange,
                       minimumSize: Size(media.width / 2.2, 50),
                       shape: RoundedRectangleBorder(
@@ -129,7 +125,7 @@ class _AvgCycleState extends State<AvgCycle> {
                           avgCycle: avgCycle,
                         );
                         userProvider.setUser(updatedUser);
-                        // Navigator.of(context).pushNamed(RouteName.periodDates);
+
                         Navigator.of(context).pushNamed(RouteName.periodDates);
                       },
                       style: ElevatedButton.styleFrom(

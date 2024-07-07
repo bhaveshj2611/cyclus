@@ -1,8 +1,3 @@
-// import 'package:femhealth/controller/user_provider.dart';
-// import 'package:femhealth/routes/route_name.dart';
-// import 'package:femhealth/widgets/reusable_widget.dart';
-// ignore_for_file: dead_code
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:female_health/controller/user_provider.dart';
 import 'package:female_health/firebase_const.dart';
@@ -11,7 +6,7 @@ import 'package:female_health/routes/route_name.dart';
 import 'package:female_health/utils/app_color.dart';
 import 'package:female_health/utils/app_constants.dart';
 import 'package:female_health/utils/firebase_auth_service.dart';
-// import 'package:female_health/widgets/reusable_widget.dart';
+
 import 'package:female_health/widgets/round_button.dart';
 import 'package:female_health/widgets/round_textfield.dart';
 import 'package:female_health/widgets/toast.dart';
@@ -58,23 +53,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
       return null;
     }
   }
-
-  // storeUserData({firstName, lastName, password, email}) async {
-  //   DocumentReference store =
-  //       firestore.collection('Users').doc(currentuser!.uid);
-
-  //   store.set({
-  //     'first_name': firstName,
-  //     'last_name': lastName,
-  //     'email': email,
-  //     'password': password,
-  //     'id': currentuser!.uid,
-
-  //     // 'type': type,
-  //     // 'image_url': '',
-  //     // 'certificate': certificate,
-  //   });
-  // }
 
   @override
   void dispose() {
@@ -207,8 +185,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     isChecked: isCheck,
                     onPressed: isCheck
                         ? () {
-                            // Provider.of<UserProvider>(context, listen: false)
-                            //     .setUsername(_firstNameTextController.text);
                             _signUp();
                           }
                         : () {}),
@@ -255,13 +231,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
       onTap: () async {
         UserCredential? userCredential = await _handleSignIn();
         if (userCredential != null) {
-          // Google Sign-In successful, handle the user accordingly
           print("Google Sign-In Successful");
           ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
             content: Text("Google Sign-In Successful"),
           ));
         } else {
-          // Google Sign-In failed
           print("Google Sign-In Failed");
           ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
             content: Text("Google Sign-In Failed"),
@@ -328,21 +302,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
     if (firebaseuser != null) {
       final userProvider = Provider.of<UserProvider>(context, listen: false);
 
-      // await storeUserData(
-      //   firstName: firstName,
-      //   lastName: lastName,
-      //   email: email,
-      //   password: password,
-      // );
-
       userProvider.setUser(UserModel(
           uid: firebaseuser.uid,
           firstName: firstName,
           lastName: lastName,
           email: email,
-          password: password
-          // Add more fields as needed
-          ));
+          password: password));
       Navigator.of(context).pushNamed(RouteName.completeprofile);
     } else {
       toast("Error occured - try again");

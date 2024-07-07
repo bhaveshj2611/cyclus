@@ -1,5 +1,5 @@
 import 'package:female_health/model/yoga.dart';
-import 'package:female_health/utils/app_color.dart';
+// import 'package:female_health/utils/app_color.dart';
 import 'package:female_health/utils/app_constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -27,9 +27,8 @@ class PoseDetailsScreen extends StatelessWidget {
               width: double.infinity,
               fit: BoxFit.cover,
               errorBuilder: (context, error, stackTrace) {
-                // Display placeholder image if there is an error loading the image
                 return Image.asset(
-                  ImagePath.appLogo, // Placeholder image asset
+                  ImagePath.appLogo,
                   height: 200,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -50,11 +49,6 @@ class PoseDetailsScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // const Text(
-                    //   'English Name:',
-                    //   style:
-                    //       TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    // ),
                     Text(
                       "${pose.englishName} / ${pose.sanskritName}",
                       style: const TextStyle(
@@ -70,12 +64,6 @@ class PoseDetailsScreen extends StatelessWidget {
                       pose.description,
                       textAlign: TextAlign.justify,
                     ),
-                    // const SizedBox(height: 16),
-                    // const Text(
-                    //   'Time:',
-                    //   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    // ),
-                    // Text(pose.time),
                     const SizedBox(height: 16),
                     const Text(
                       'Why?',
@@ -87,25 +75,7 @@ class PoseDetailsScreen extends StatelessWidget {
                       textAlign: TextAlign.justify,
                     ),
                     const SizedBox(height: 16),
-                    // const Text(
-                    //   'Variations:',
-                    //   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    // ),
-                    // Text(pose.variations),
-                    // const SizedBox(height: 16),
-                    // const Text(
-                    //   'Category:',
-                    //   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    // ),
-                    // Text(pose.category),
                     const SizedBox(height: 16),
-                    // const Text(
-                    //   'Target:',
-                    //   style:
-                    //       TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    // ),
-                    // Text(pose.target),
-                    // const SizedBox(height: 16),
                     const Text(
                       'How?',
                       style:

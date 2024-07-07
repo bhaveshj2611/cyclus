@@ -1,9 +1,3 @@
-// import 'package:femhealth/controller/user_provider.dart';
-// import 'package:femhealth/routes/route_name.dart';
-// import 'package:femhealth/widgets/reusable_widget.dart';
-// ignore_for_file: dead_code
-
-// import 'package:female_health/controller/user_provider.dart';
 import 'package:female_health/firebase_const.dart';
 import 'package:female_health/routes/route_name.dart';
 import 'package:female_health/utils/app_color.dart';
@@ -76,24 +70,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 SizedBox(
                   height: media.width * 0.05,
                 ),
-                // RoundTextField(
-                //   hitText: "First Name",
-                //   icon: ImagePath.userTxt,
-                //   color: AppColor.darkBlue.withOpacity(0.7),
-                //   controller: _firstNameTextController,
-                // ),
-                // SizedBox(
-                //   height: media.width * 0.04,
-                // ),
-                // RoundTextField(
-                //   hitText: "Last Name",
-                //   color: AppColor.darkBlue.withOpacity(0.7),
-                //   icon: ImagePath.userTxt,
-                //   controller: _lastNameTextController,
-                // ),
-                // SizedBox(
-                //   height: media.width * 0.04,
-                // ),
+
                 RoundTextField(
                   hitText: "Email",
                   color: AppColor.darkBlue.withOpacity(0.7),
@@ -137,10 +114,6 @@ class _SignInScreenState extends State<SignInScreen> {
                     onPressed: () {
                       _signIn();
                     }),
-
-                // SizedBox(
-                //   height: media.width * 0.04,
-                // ),
 
                 SizedBox(
                   height: media.width * 0.1,
