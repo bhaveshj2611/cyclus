@@ -5,7 +5,7 @@ and general health easier by utilizing machine learning techniques with Flask,Py
 backend and Flutter and Dart for the frontend.
 
 
-<img src="./app_model_shots/cyclus-readme.png" alt="" width="800">
+<img src="./app_model_shots/banner-cyclus.png" alt="" width="700">
 
 ## Screenshots
  
