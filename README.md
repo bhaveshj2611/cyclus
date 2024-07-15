@@ -1,8 +1,6 @@
  # Cyclus - Female Health & Wellbeing App  
  
-Cyclus seeks to make tracking menstrual cycles, ovulation,
-and general health easier by utilizing machine learning techniques with Flask,Python for the
-backend and Flutter and Dart for the frontend.
+Cyclus is a female health and wellness app built with Flutter, Dart, Firebase. Cyclus offers next menstrual cycle prediction, Guided fitness and yoga stretches. It utilizes a supervised trained ML Model for predictive analysis of the next menstrual cycle.
 
 
 <img src="./app_model_shots/banner-cyclus.png" alt="" width="700">
